@@ -3,31 +3,40 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
- @NoArgsConstructor @AllArgsConstructor
-public class Square {
-     @Getter @Setter
+@NoArgsConstructor
 
-    public double squareSide;
+@Getter
+@Setter
+public class Square extends Rectangle {
 
-    public Square(double squareSide){
-        this.squareSide = squareSide;
-    }
-    public Square(){
-
+    public Square(double side) {
+        super(side, side);
     }
 
-    public void setSide(double squareSide){
-        this.squareSide = squareSide;
+    @Override
+    public double getArea() {
+        return super.getArea();
     }
 
-    public double getArea(){
-        return Math.pow(this.squareSide, 2);
-
+    public void printCurrentSquare() {
+        System.out.println("Square with side " + this.getLength() + " has an area of " + getArea());
     }
 
-    public void printCurrentSquare(){
-        System.out.println("Square with side " + this.squareSide + " has area of " + getArea());
+    public void draw() {
+        System.out.println("Drawing a square");
     }
 
+    @Override
+    public String toString() {
+        return "My square has 4 sides of length " + this.getLength();
+    }
 
+    public void setSide(double side) {
+        super.setLength(side);
+        super.setWidth(side);
+    }
+
+    public double getSide() {
+        return this.getLength();
+    }
 }
