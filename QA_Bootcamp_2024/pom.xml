@@ -5,6 +5,10 @@
     <groupId>ro.qa.bootcamp.betfair</groupId>
     <artifactId>qa_bootcamp</artifactId>
     <version>1.0</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>assigment</module>
+    </modules>
 
     <properties>
             <maven.compiler.source>17</maven.compiler.source>
