@@ -3,13 +3,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
-public class Rectangle extends Shape {
+@NoArgsConstructor @AllArgsConstructor
+public class Rectangle extends Shape{
 
+    @Getter @Setter
     private double length;
+    @Getter @Setter
     private double width;
 
     public double getArea() {
@@ -21,15 +20,13 @@ public class Rectangle extends Shape {
     }
 
     public double getPerimeter() {
-        return 2 * (this.length + this.width);
+        return 2 * (length + width);
     }
 
     @Override
     public void draw() {
-        super.draw(); //this calls the method from the superclass
-        System.out.println("Drawing a rectangle with length " + this.length + " and width " + this.width);
+//        super.draw(); // this calls the method from the superclass
+        System.out.println("Drawing a Rectangle");
     }
+
 }
-
-
-

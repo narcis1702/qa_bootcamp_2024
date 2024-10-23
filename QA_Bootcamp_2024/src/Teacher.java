@@ -3,12 +3,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@NoArgsConstructor@AllArgsConstructor@Getter@Setter
+@AllArgsConstructor @NoArgsConstructor @Getter @Setter
 public class Teacher extends Person {
 
     private String job;
 
-    public void teachCourse(){
-        System.out.println("Teaching at" + this.job);
+    public void teachCourse() {
+        System.out.println("Teaching at " + this.job);
     }
+
 }

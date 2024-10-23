@@ -3,14 +3,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@NoArgsConstructor@AllArgsConstructor @Getter@Setter
+@NoArgsConstructor @AllArgsConstructor @Getter @Setter
 public class Person {
+
     private String name;
-    private String Surname;
+    private String surname;
     private String dateOfBirth;
 
-    public void eat(){
-        System.out.println("Eat an apple");
+    public void eat() {
+        System.out.println("The person eats healthy every day.");
     }
+
 
 }

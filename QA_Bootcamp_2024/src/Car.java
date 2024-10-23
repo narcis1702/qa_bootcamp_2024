@@ -1,19 +1,19 @@
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
 public class Car {
 
-    public boolean getSpeed;
+    @Setter @Getter
     private String model;
+    @Setter @Getter
     private String color;
+    @Setter @Getter
     private String carType;
     private final double MAX_SPEED = 180;
     private double currentSpeed;
     private float cylinderCapacity;
     private float currentMileage;
-    private double carPosition;
+    private double carPosition; // compared to magnetic north
     private final int MAX_GEAR = 6;
     private int currentGear;
 
@@ -28,17 +28,18 @@ public class Car {
         this.currentGear = currentGear;
     }
 
-    public Car(String color, String carType, String model, float cylinderCapacity, double carPosition) {
-        this.color = color;
+    public Car(String carType, String color, String model, float cylinderCapacity, double carPosition) {
         this.carType = carType;
+        this.color = color;
         this.model = model;
         this.cylinderCapacity = cylinderCapacity;
         this.carPosition = carPosition;
     }
 
-    public Car() {}
+    public Car() {
+    }
 
-    public void startCar() {
+    public void starCar() {
         currentGear = 1;
         currentSpeed = 5;
     }
@@ -63,7 +64,8 @@ public class Car {
     public void accelerate(double speedDelta) {
         if (currentSpeed + speedDelta > MAX_SPEED) {
             currentSpeed = MAX_SPEED;
-        } else {
+        }
+        else {
             currentSpeed += speedDelta;
         }
     }
@@ -71,7 +73,8 @@ public class Car {
     public void decelerate(double speedDelta) {
         if (currentSpeed - speedDelta < 0) {
             currentSpeed = 0;
-        } else {
+        }
+        else {
             currentSpeed -= speedDelta;
         }
     }
@@ -89,18 +92,21 @@ public class Car {
     }
 
     public void printCar() {
-        System.out.println("------------------");
+        System.out.println("----------------------");
         System.out.println("Car model: " + model);
         System.out.println("Car color: " + color);
         System.out.println("Car type: " + carType);
         System.out.println("Car position (based on North): " + carPosition);
         System.out.println("Car mileage: " + currentMileage);
+        System.out.println("Car gear: " + currentGear);
+        System.out.println("Car speed: " + currentSpeed);
     }
 
     public void setSpeed(double currentSpeed) {
         if (currentSpeed > MAX_SPEED) {
             System.out.println("Invalid speed " + currentSpeed);
-        } else {
+        }
+        else {
             this.currentSpeed = currentSpeed;
         }
     }
@@ -108,4 +114,5 @@ public class Car {
     public double getSpeed() {
         return this.currentSpeed;
     }
+
 }
