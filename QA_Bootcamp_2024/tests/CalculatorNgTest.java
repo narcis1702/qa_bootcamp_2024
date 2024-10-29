@@ -15,7 +15,7 @@ public class CalculatorNgTest {
 
     Calculator c;
     final String additionFailMessage = "Addition failed.";
-    ExtentReports extent = new ExtentReports();;
+    ExtentReports extent = new ExtentReports();
     ITestContext testContext;
 
     @DataProvider

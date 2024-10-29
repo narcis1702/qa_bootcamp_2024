@@ -12,9 +12,10 @@
         <junitVersion>5.11.2</junitVersion>
         <lombokVersion>1.18.34</lombokVersion>
         <testngVersion>7.10.2</testngVersion>
-        <surefireVersion>2.2.11</surefireVersion>
+        <surefireVersion>3.5.1</surefireVersion>
         <extentVersion>5.1.2</extentVersion>
         <suiteFile>testSuites\runSuites.xml</suiteFile>
+        <seleniumVersion>4.25.0</seleniumVersion>
     </properties>
 
     <dependencies>
@@ -50,6 +51,11 @@
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>${extentVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${seleniumVersion}</version>
         </dependency>
 
 
