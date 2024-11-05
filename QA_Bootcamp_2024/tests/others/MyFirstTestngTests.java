@@ -1,5 +1,5 @@
-import org.testng.Assert;
-import org.testng.ITestContext;
+package others;
+
 import org.testng.annotations.*;
 
 public class MyFirstTestngTests {

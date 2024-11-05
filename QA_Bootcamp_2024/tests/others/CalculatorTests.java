@@ -1,3 +1,5 @@
+package others;
+
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,7 +27,7 @@ public class CalculatorTests {
 
     @Test
     public void testAddition02() {
-        assertEquals(14.5, c.compute(10, 4.5, "+") , "Addition fail");
+        Assertions.assertEquals(14.5, c.compute(10, 4.5, "+") , "Addition fail");
     }
 
     @Test
@@ -46,22 +48,22 @@ public class CalculatorTests {
 
     @Test
     public void testSubtraction01() {
-        assertEquals(10, c.compute(5, -5, "-"), "Subtraction failed.");
+        Assertions.assertEquals(10, c.compute(5, -5, "-"), "Subtraction failed.");
     }
 
     @Test
     public void testMultiplication01() {
-        assertEquals(14, c.compute(7, 2,"*"), "Multiplication failed.");
+        Assertions.assertEquals(14, c.compute(7, 2,"*"), "Multiplication failed.");
     }
 
     @Test
     public void testSquareRoot01() {
-        assertEquals(8, c.compute(64, 0, "SQRT"), "SQRT failed.");
+        Assertions.assertEquals(8, c.compute(64, 0, "SQRT"), "SQRT failed.");
     }
 
     @Test
     public void testSquareRoot02(){
-        assertEquals(Math.sqrt(2), c.compute(2, 0, "SQRT"), "SQRT failed.");
+        Assertions.assertEquals(Math.sqrt(2), c.compute(2, 0, "SQRT"), "SQRT failed.");
     }
 
     @Test
