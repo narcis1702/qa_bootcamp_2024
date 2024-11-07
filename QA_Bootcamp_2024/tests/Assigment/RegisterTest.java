@@ -37,14 +37,14 @@ public class RegisterTest {
 
         List<Object[]> testData = new ArrayList<>();
 
-        testData.add(new Object[] { "invalidemail.com", "short23","short23","andreea"});
-        testData.add(new Object[] { "ana@s.com", "","short23","andreea" });
-        testData.add(new Object[] { "vlad@t.com", "vlad2345","vlad2435","andreea" });
-        testData.add(new Object[] { "ioana@ioana.com", "short23","short23","" });
+        testData.add(new Object[] { "invalidemail.com", "short23","short23","gabi"});
+        testData.add(new Object[] { "ancaa@s.com", "","short23","gabi" });
+        testData.add(new Object[] { "daniel@t.com", "vlad2345","vlad2435","gabi" });
+        testData.add(new Object[] { "ionela@ioana.com", "short23","short23","" });
 
-        testData.add(new Object[] { "andre@ci.com", "andreea24","andreea24","andreea" });
-        testData.add(new Object[] { "popion@ion.com", "ionpop23","ionpop23","ionut" });
-        testData.add(new Object[] { "dudf@flaviu.com", "flaviu234","flaviu234","flaviu" });
+        testData.add(new Object[] { "anadre@ci.com", "andr2554","andr2554","gabi" });
+        testData.add(new Object[] { "popion@ion.com", "ioddop23","ioddop23","ionut" });
+        testData.add(new Object[] { "dudf@flaviu.com", "flava284","flava284","daniel" });
 
         return testData.iterator();
     }

@@ -16,7 +16,7 @@ import java.time.Duration;
 import java.util.Properties;
 
 public class Utils {
-    private static final String configFile = "config.properties";
+    private static final String configFile = "config.propreties";
     public static String getConfigProperty(String property) {
         Properties configProps = new Properties();
         String baseUrl = "";
