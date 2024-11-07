@@ -1,6 +1,7 @@
 package juiceShop.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import juiceShop.frameworkUtils.Utils;
@@ -17,6 +18,7 @@ public class RegistrationPage extends BasePage {
     private static final String SECURITY_ANSWER = "securityAnswerControl";
     private static final String REGISTER_SUBMIT_BUTTON = "registerButton";
     private static final String COOKIES_MODAL = "body > div.cc-window.cc-floating.cc-type-info.cc-theme-classic.cc-bottom.cc-right.cc-color-override--1225450786 > div > a";
+    // div.mat-simple-snack-bar-content
 
     private static final String REGISTER_STATIC_TEXT = "User Registration";
 
@@ -54,6 +56,8 @@ public class RegistrationPage extends BasePage {
 
         WebElement cookiesButton = driver.findElement(By.cssSelector(COOKIES_MODAL));
         cookiesButton.click();
+
+        Utils.scrollToElement(driver, cookiesButton);
 
         WebElement submitButton = Utils.waitForElementClickable(driver, 10, By.id(REGISTER_SUBMIT_BUTTON));
         submitButton.click();
