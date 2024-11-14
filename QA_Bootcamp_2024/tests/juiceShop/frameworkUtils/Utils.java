@@ -105,12 +105,27 @@ public class Utils {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
+    public static WebElement waitForVisibility (WebDriver driver,long seconds,By locator){
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(seconds));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
 
     public static void scrollDown(WebDriver driver) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,document.body.scrollHeight);", "");
     }
-
+    public static void setDate(WebDriver driver,String date,WebElement dateField){
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].value='" + date + "';", dateField);
+    }
+    public static void textToBeInElementLocated(WebDriver driver,long seconds, By locator,String text){
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(seconds));
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(locator,text));
+    }
+    public static void waitToBeClickable(WebDriver driver,long seconds, WebElement locator){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
     public static void scrollToElement(WebDriver driver, WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", element);
