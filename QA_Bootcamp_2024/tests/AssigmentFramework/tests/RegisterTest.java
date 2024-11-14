@@ -1,11 +1,10 @@
-package AssigmentFramework.pages.tests;
+package AssigmentFramework.tests;
 
 import AssigmentFramework.pages.RegistrationPage;
-import juiceShop.frameworkUtils.Utils;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import java.time.Duration;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;

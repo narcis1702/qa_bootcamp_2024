@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LogInPage extends BasePage{
+public class LogInPage extends BasePage {
     private static final String SIGN_IN_SELECTOR = "#svelte > div.container-fluid > div.main.row > div.content > h1"; //CSS SELECTOR
     private static final String SIGN_IN_STATIC_TEXT = "Sign in";
     private static final String USERNAME = "user"; //ID

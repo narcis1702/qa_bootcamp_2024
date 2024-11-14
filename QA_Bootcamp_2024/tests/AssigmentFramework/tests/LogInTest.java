@@ -1,4 +1,4 @@
-package AssigmentFramework.pages.tests;
+package AssigmentFramework.tests;
 
 import AssigmentFramework.pages.LogInPage;
 import org.testng.Assert;

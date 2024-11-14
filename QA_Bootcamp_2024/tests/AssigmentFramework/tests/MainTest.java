@@ -1,10 +1,10 @@
-package AssigmentFramework.pages.tests;
+package AssigmentFramework.tests;
 
 import AssigmentFramework.pages.MainPage;
 import org.testng.Assert;
 import org.testng.annotations.Test
 
-import static AssigmentFramework.pages.tests.BaseTest.baseUrl;
+import static AssigmentFramework.tests.BaseTest.baseUrl;
 
 public class MainTest {
     @Test

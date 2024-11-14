@@ -1,4 +1,4 @@
-package AssigmentFramework.pages.tests;
+package AssigmentFramework.tests;
 
 import juiceShop.frameworkUtils.Utils;
 import org.openqa.selenium.WebDriver;

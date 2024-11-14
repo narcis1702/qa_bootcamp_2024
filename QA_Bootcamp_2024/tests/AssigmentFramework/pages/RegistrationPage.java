@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class RegistrationPage extends BasePage{
+public class RegistrationPage extends BasePage {
     private static final String REGISTER_BUTTON = "#svelte > div.container-fluid > div.main.row > div.content > p:nth-child(3) > div > a"; //CSS
     private static final String SIGN_UP_SELECTOR = "#svelte > div.container-fluid > div.main.row > div.content > h1"; //CSS SELECTOR
     private static final String SIGN_UP_SELECTOR_TEXT = "Sign up";
