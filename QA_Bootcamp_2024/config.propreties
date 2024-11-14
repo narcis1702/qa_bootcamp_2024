@@ -1,2 +1,5 @@
-browser=edge
- baseUrl=http://57.151.123.81:3000
+browser=firefox
+baseUrl=http://57.151.123.81:3000
+headless=false
+maximized=true
+petStoreUrl = https://petstore.swagger.io/v2

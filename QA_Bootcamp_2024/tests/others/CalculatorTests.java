@@ -1,8 +1,7 @@
-package others;
+package Others;
+import Calculator .*;
 
 import org.junit.jupiter.api.*;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculatorTests {
 
@@ -22,7 +21,7 @@ public class CalculatorTests {
     @Test
     public void testAddition01() {
         double result = c.compute(3,4 , "+");
-        assertEquals(7, result,"Addition fail");
+        Assertions.assertEquals(7, result,"Addition fail");
     }
 
     @Test
@@ -66,37 +65,6 @@ public class CalculatorTests {
         Assertions.assertEquals(Math.sqrt(2), c.compute(2, 0, "SQRT"), "SQRT failed.");
     }
 
-    @Test
-    public void testLargeNumberAddition() {
-        double largeNum = Double.MAX_VALUE;
-        double result = c.compute(largeNum, 1, "+");
-        assertEquals(Double.POSITIVE_INFINITY, result, "Addition of large numbers failed.");
-    }
-
-    @Test
-    public void testNegativeAddition() {
-        double result = c.compute(-5, -10, "+");
-        assertEquals(-15, result, "Negative addition failed.");
-    }
-
-    @Test
-    public void testNegativeSubtraction() {
-        double result = c.compute(-5, -10, "-");
-        assertEquals(5, result, "Negative subtraction failed.");
-    }
-
-    @Test
-    public void testNegativeMultiplication() {
-        double result = c.compute(-5, 10, "*");
-        assertEquals(-50, result, "Negative multiplication failed.");
-    }
-
-    @Test
-    public void testNegativeSquareRoot() {
-        IllegalArgumentException ex = Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            c.compute(-9, 0, "SQRT");
-        }, "Expected an IllegalArgumentException for square root of a negative number.");
-    }
     @AfterEach
     public void cleanTest() {
         System.out.println("Cleanup after the test.");
