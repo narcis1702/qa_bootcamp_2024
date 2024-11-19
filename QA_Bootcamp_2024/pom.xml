@@ -13,13 +13,14 @@
         <lombokVersion>1.18.34</lombokVersion>
         <testngVersion>7.10.2</testngVersion>
         <surefireVersion>3.5.1</surefireVersion>
-        <extentVersion>5.1.2</extentVersion>
+        <xtentVersion>5.1.2</xtentVersion>
         <seleniumVersion>4.25.0</seleniumVersion>
         <restAssuredVersion>5.5.0</restAssuredVersion>
-        <hamCrestVersion>3.0</hamCrestVersion>
+        <hamcrestVersion>3.0</hamcrestVersion>
         <jsonVersion>20240303</jsonVersion>
         <gsonVersion>2.9.0</gsonVersion>
-        <suiteFile>testSuites\runSuites.xml</suiteFile>
+        <surefireRunnerVersion>3.5.2</surefireRunnerVersion>
+        <suiteFile>testSuites/petStoreSuite.xml</suiteFile>
     </properties>
 
     <dependencies>
@@ -54,24 +55,26 @@
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
-            <version>${extentVersion}</version>
+            <version>${xtentVersion}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>${seleniumVersion}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
             <version>${restAssuredVersion}</version>
             <scope>test</scope>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
         <dependency>
             <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-library</artifactId>
-            <version>${hamCrestVersion}</version>
+            <artifactId>hamcrest</artifactId>
+            <version>${hamcrestVersion}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -85,6 +88,8 @@
             <artifactId>gson</artifactId>
             <version>${gsonVersion}</version>
         </dependency>
+
+
     </dependencies>
 
     <build>
@@ -98,7 +103,19 @@
                         <suiteXmlFiles>
                             <suiteXmlFile>${suiteFile}</suiteXmlFile>
                         </suiteXmlFiles>
+                        <properties>
+                            <name>listener</name>
+                            <value>customReporting.CustomTestListener, customReporting.CustomTestReporter</value>
+                        </properties>
                     </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.apache.maven.surefire</groupId>
+                            <artifactId>surefire-testng</artifactId>
+                            <version>${surefireRunnerVersion}</version>
+                        </dependency>
+                    </dependencies>
+
                 </plugin>
             </plugins>
         </pluginManagement>
