@@ -2,18 +2,22 @@
 
 <suite name="PetStore" verbose="1" >
     <listeners>
-        <listener class-name="customReporting.CustomTestReporter"/>
-        <listener class-name="customReporting.CustomTestListener"/>
+        <listener class-name="customReporting.CustomTestReporter"></listener>
+        <listener class-name="customReporting.CustomTestListener"></listener>
     </listeners>
-    <test name="Pet Tests" >
+    <test name="Pet Test" >
         <classes>
-            <class name="petStore.PetTest" />
+            <class name="PetStore.PetTest" />
         </classes>
     </test>
-    <test name="User Tests" >
+    <test name="User Test" >
         <classes>
-            <class name="petStore.UserTest" />
+            <class name="PetStore.UserTest" />
         </classes>
     </test>
-
+    <test name="Store Test" >
+        <classes>
+            <class name="PetStore.StoreTest" />
+        </classes>
+    </test>
 </suite>
